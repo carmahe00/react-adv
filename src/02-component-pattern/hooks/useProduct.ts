@@ -1,5 +1,5 @@
 import { useState } from 'react';
-export default () =>{
+const useProduct =  () =>{
     const [counter, setCounter] = useState(0);
 
     const increaseBy = (value: number) => {
@@ -9,3 +9,5 @@ export default () =>{
         increaseBy, counter
     }
 }
+
+export default useProduct

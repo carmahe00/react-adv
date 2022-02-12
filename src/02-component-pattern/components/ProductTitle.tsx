@@ -4,7 +4,13 @@ import { ProductContext } from './ProductCard';
 
 import styles from '../styles/styles.module.css';
 
-export const ProductTitle = ({ title }: { title?: string }) => {
+export interface Props {
+    title?: string
+    className?: string
+    style?: React.CSSProperties | undefined
+}
+
+export const ProductTitle = ({ title, className, style }: Props) => {
     const { product } = useContext(ProductContext)
     let showTitle
     title ?
@@ -13,6 +19,6 @@ export const ProductTitle = ({ title }: { title?: string }) => {
             showTitle = product.title :
             showTitle = 'No Description'
     return (
-        <span className={styles.productDescription} >{showTitle}</span>
+        <span style={style} className={`${styles.productDescription} ${className}`} >{showTitle}</span>
     )
 }

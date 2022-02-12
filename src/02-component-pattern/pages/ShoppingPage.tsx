@@ -1,5 +1,5 @@
-import React from 'react'
-import {ProductCard, ProductImage, ProductTitle, ProductButtons} from '../components'
+import { ProductCard, ProductImage, ProductTitle, ProductButtons } from '../components'
+import '../styles/custom-style.css';
 
 const product = {
     id: "1",
@@ -9,7 +9,7 @@ const product = {
 
 const ShoppingPage = () => {
     return (
-        <div>
+        <div  >
             <h1>ShoppingPage</h1>
             <hr />
             <div style={{
@@ -24,12 +24,39 @@ const ShoppingPage = () => {
                     <ProductCard.Buttons />
                 </ProductCard>
 
-                <ProductCard product={product} >
-                    <ProductImage img="https://i.imgflip.com/1bij.jpg" />
-                    <ProductTitle title="Hola Mundo" />
-                    <ProductButtons />
+                <ProductCard product={product} className="bg-dark text-white " >
+                    <ProductImage 
+                        
+                        className='custom-image'
+                        style={{
+                            boxShadow: '10px 10px 10px rgba(0, 0, 0, 0.2)'
+                        }} 
+                    />
+                    <ProductTitle title="Hola Mundo" className="text-bold" />
+                    <ProductButtons className="custom-buttons" />
                 </ProductCard>
-                
+
+                <ProductCard product={product} style={{
+                    backgroundColor: '#70D1F8'
+                }} >
+                    <ProductImage
+                        style={{
+                            boxShadow: '10px 10px 10px rgba(0, 0, 0, 0.2)'
+                        }}
+                    />
+                    <ProductTitle
+                        style={{
+                            fontWeight: 'bold'
+                        }}
+                    />
+                    <ProductButtons
+                        style={{
+                            display: 'flex',
+                            justifyContent: 'end'
+                        }}
+                    />
+                </ProductCard>
+
             </div>
         </div>
     )

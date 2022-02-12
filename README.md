@@ -2,3 +2,5 @@
 
 ## 02 - Pattern
 ### Compound Component Pattern
+### className
+### inline styles
