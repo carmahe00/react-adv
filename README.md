@@ -4,3 +4,6 @@
 ### Compound Component Pattern
 ### className
 ### inline styles
+
+## 03 - Pattern
+### Control Props
