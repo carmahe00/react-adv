@@ -4,16 +4,35 @@ form {
     width: 400px;
 }
 
-input, select {
+select {
+    margin-top: 5px;
+    outline: none;
+    padding: 10px;
+    background-color: #fff;
+}
+
+input {
     margin-top: 5px;
     outline: none;
     padding: 10px;
 }
 
+.button-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 button {
     margin-top: 20px;
     padding: 10px;
+    cursor: pointer;
+    background: rgb(40,44,52);
+    color: #ffffff;
+    font-size: larger;
+    font-weight: bold;
+    background: linear-gradient(180deg, rgba(40,44,52,1) 0%, rgba(0, 213, 255, 0.4) 100%); 
+    border-radius: 20px;
 }
 
 span, .error-message {
