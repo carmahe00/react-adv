@@ -5,7 +5,7 @@ interface propsInut {
     label: string
     placeholder?: string
     [x: string]: any
-    as: string
+    as?: string
 }
 
 export function MySelect({ label, ...props }: propsInut) {
